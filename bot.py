@@ -33,7 +33,7 @@ async def process_callback_video_input_button(callback_query: types.CallbackQuer
 
 
 @dp.callback_query_handler(lambda c: c.data == 'make_videonote')
-async def process_callback_video_input_button(callback_query: types.CallbackQuery):
+async def process_callback_make_videonote(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
 
     response = await bot.send_message(callback_query.from_user.id, 'Идёт обработка видео!')
